@@ -1,13 +1,12 @@
 <template>
   <div class="container">
     <h1>
-      <span>OMDb API</span><br />
-      THE OPEN<br />
-      MOVIE DATABASE
+      <span>OHMIN's Movie Search</span><br />
+      the Open Movie DataBase      
     </h1>
     <p>
-      The OMDb API is a RESTful web service to obtain movie information, all content and images on the site are contributed and maintained by our users.<br />
-      If you find this service useful, please consider making a one-time donation or become a patron.
+      OMDb API는 영화 정보를 얻기 위한 RESTful 웹 서비스이며,<br />
+      사이트의 모든 콘텐츠와 이미지는 사용자가 제공하고 유지 관리합니다.
     </p>
   </div>
 </template>
