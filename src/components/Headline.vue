@@ -2,7 +2,7 @@
   <div class="container">
     <h1>
       <span>OHMIN's Movie Search</span><br />
-      the Open Movie DataBase      
+      <div>the Open Movie DataBase</div>      
     </h1>
     <p>
       OMDb API는 영화 정보를 얻기 위한 RESTful 웹 서비스이며,<br />
@@ -12,7 +12,6 @@
 </template>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
 
 .container{
   padding-top: 40px;
@@ -22,7 +21,10 @@ h1{
   font-family: "Oswald", sans-serif;
   font-size: 80px;
   span {
-    color: $primary;
+    color: $secondary;
+  }
+  div{
+    color: $gray-700;
   }
 }
 p{

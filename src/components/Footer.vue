@@ -2,7 +2,7 @@
   <footer>
     <Logo />
     <a
-      href="/"
+      href="https://github.com/ohminkwon/vue3-movie-search"
       class="footer-letter"
       target="_blank">
       (c) {{ new Date().getFullYear() }} All rights reserved by OHMIN KWON
@@ -21,13 +21,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
+
 
 footer{
   padding: 70px 0;
   text-align: center;
   opacity: .3;
-  
+    
   .logo{
     display: block;
     margin-bottom: 4px;
@@ -35,6 +35,8 @@ footer{
 
   .footer-letter{
     color: $gray-600;
+    text-decoration: none;
+    cursor: pointer;    
   }
 }
 </style>
