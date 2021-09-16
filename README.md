@@ -5,9 +5,13 @@
 Vue3와 OMDb API를 사용하는 영화 검색 애플리케이션 예제입니다.
 Vue3-webpack-template를 활용하여 프로젝트를 시작합니다.
 
-[DEMO](https://cloning-omdb-ohminkwon.netlify.app/)  
+[DEMO](https://cloning-omdb-ohminkwon.netlify.app/)
 
-<!-- ![home](./src/assets/movie_search_page.png) -->
+![Main](./src/assets/example_00.png)
+
+![example1](./src/assets/example_01.gif)
+
+![example2](./src/assets/example_02.gif)
 
 ## 📖참조 문서
 - [Vue3](https://v3.ko.vuejs.org/guide/introduction.html)
