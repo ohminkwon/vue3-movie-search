@@ -5,7 +5,7 @@
       href="https://github.com/ohminkwon/vue3-movie-search"
       class="footer-letter"
       target="_blank">
-      (c) {{ new Date().getFullYear() }} All rights reserved by OHMIN KWON
+      (c) {{ new Date().getFullYear() }} This site was built by OHMIN KWON
     </a>
   </footer>
 </template>
@@ -26,14 +26,14 @@ export default {
 footer{
   padding: 70px 0;
   text-align: center;
-  opacity: .3;
+  opacity: .3;  
     
   .logo{
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
   }
 
-  .footer-letter{
+  .footer-letter{    
     color: $gray-600;
     text-decoration: none;
     cursor: pointer;    
