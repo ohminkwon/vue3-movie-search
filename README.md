@@ -7,12 +7,7 @@ Vue3-webpack-template를 활용하여 프로젝트를 시작합니다.
 
 [DEMO](https://cloning-omdb-ohminkwon.netlify.app/)
 
-<img style="border: 2px solid orange;" src="./src/assets/example_00.png" alt="Main">
-
-## 화면 출력 예시
-
-검색 & 출력 예시 
-<img style="border: 2px solid orange;" src="./src/assets/example_01.gif" alt="example-1">
+<img style="border: 2px solid orange;" src="./src/assets/example_00.png" alt="Main">  
 
 ## 📖참조 문서
 - [Vue3](https://v3.ko.vuejs.org/guide/introduction.html)
@@ -23,6 +18,14 @@ Vue3-webpack-template를 활용하여 프로젝트를 시작합니다.
 - [Jest](https://jestjs.io/docs/getting-started)
 - [Vue test utils](https://next.vue-test-utils.vuejs.org/guide/)
 - [Cypress](https://docs.cypress.io/guides/overview/why-cypress)
+
+## 🖥️ 동작 화면
+
+검색 & 출력 예시   
+<img style="border: 2px solid orange;" src="./src/assets/example_01.gif" alt="example-1">  
+  
+반응성 예시   
+<img style="border: 2px solid orange;" src="./src/assets/example_02.gif" alt="example-2">
 
 ## 🎯Main Contents
 - Vuex(Store)로 중앙 집중식 데이터 처리 & 네임스페이스 관리
