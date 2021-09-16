@@ -7,11 +7,14 @@ Vue3-webpack-template를 활용하여 프로젝트를 시작합니다.
 
 [DEMO](https://cloning-omdb-ohminkwon.netlify.app/)
 
-![Main](./src/assets/example_00.png)
+- 메인화면 예시 
+<img style="border: 2px solid orange;" src="./src/assets/example_00.png" alt="Main">
 
-![example1](./src/assets/example_01.gif)
+- 검색 & 출력 예시 
+<img style="border: 2px solid orange;" src="./src/assets/example_01.gif" alt="example-1">
 
-![example2](./src/assets/example_02.gif)
+- 반응성 예시
+<img style="border: 2px solid orange;" src="./src/assets/example_02.gif" alt="example-2">
 
 ## 📖참조 문서
 - [Vue3](https://v3.ko.vuejs.org/guide/introduction.html)
