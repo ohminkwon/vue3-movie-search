@@ -48,7 +48,7 @@
               :title="name"
               class="rating">
               <img
-                :src="`../src/assets/ratings/${name}.png`"
+                :src="`https://raw.githubusercontent.com/ohminkwon/vue3-movie-search/master/src/assets/ratings/${name}.png`"                
                 :alt="name" />
               <span>{{ score }}</span>
             </div>
