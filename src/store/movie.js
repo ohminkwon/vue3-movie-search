@@ -49,9 +49,7 @@ export default {
         const { Search, totalResults } = res.data
         commit('updateState', {
           movies: _uniqBy(Search, 'imdbID')
-        })
-        console.log(totalResults) // 261 => 26 + 1
-        console.log(typeof totalResults) // string 
+        })        
 
         const total = parseInt(totalResults, 10)
         const pageLength = Math.ceil(total / 10)
@@ -98,8 +96,7 @@ export default {
       })
 
       try {
-        const res = await _fetchMovie(payload)
-        console.log(res)
+        const res = await _fetchMovie(payload)        
         commit('updateState',{
           theMovie: res.data
         })

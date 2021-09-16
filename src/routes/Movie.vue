@@ -99,8 +99,7 @@ export default {
     //   return this.$store.state.movie.loading
     // }
   },
-  created() {
-    console.log(this.$route)
+  created() {    
     this.$store.dispatch('movie/searchMovieWithId', {
       
       // movie/tt1234 (웹 주소 설정)
