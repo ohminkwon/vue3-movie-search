@@ -2,7 +2,8 @@ module.exports = {
   // 사전에 정의된 전역 변수 설정
   env: {
     browser: true,
-    node: true
+    node: true,
+    jest: true
   },
   // 사용 가능한 규칙 세트
   extends: [
@@ -17,18 +18,18 @@ module.exports = {
   },
   // 추가적인 코드 규칙을 설정
   rules: {
-    'vue/html-self-closing': ['error', {
-      html: {
-        void: 'always',
-        normal: 'never',
-        component: 'always'
+    "vue/html-self-closing": ["error", {
+      "html": {
+        "void": 'always',
+        "normal": 'never',
+        "component": 'always'
       },
-      svg: 'always',
-      math: 'always'
+      "svg": 'always',
+      "math": 'always'
     }],
-    'vue/html-closing-bracket-newline': ['error', {
-      singleline: 'never',
-      multiline: 'never'
+    "vue/html-closing-bracket-newline": ["error", {
+      "singleline": 'never',
+      "multiline": 'never'
     }]
   }
 }

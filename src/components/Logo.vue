@@ -20,4 +20,4 @@
     color: $primary
   }
 }
-</style>
+</style> 

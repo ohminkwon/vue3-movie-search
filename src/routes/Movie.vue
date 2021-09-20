@@ -21,7 +21,7 @@
       v-else
       class="movie-details">
       <div
-        :style="{backgroundImage: `url(${requestDiffSizeimage(theMovie.Poster)})`}"
+        :style="{backgroundImage: `url(${requestDiffSizeImage(theMovie.Poster)})`}"
         class="poster">
         <Loader 
           v-if="imageLoading"
@@ -107,7 +107,7 @@ export default {
     })
   },
   methods:{  
-    requestDiffSizeimage(url, size=700){
+    requestDiffSizeImage(url, size=700){
       if(!url || url === 'N/A'){
         this.imageLoading = false
         return ''

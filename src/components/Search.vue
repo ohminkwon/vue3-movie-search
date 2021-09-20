@@ -56,11 +56,9 @@ export default {
           items: (function(){
             const years =[]
             const thisYear=new Date().getFullYear()
-
             for(let i = thisYear; i>=1985; i--){
               years.push(i)
-            }
-            
+            }            
             return years
           })() // 즉시 실행 함수: ()()
         }
