@@ -2,7 +2,7 @@
 
 # 🎥 Vue3 Movie app
 
-Vue3와 OMDb API를 사용하는 영화 검색 애플리케이션 예제입니다.
+Vue3와 OMDb API를 사용하는 영화 검색 애플리케이션 예제입니다.  
 Vue3-webpack-template를 활용하여 프로젝트를 시작합니다.
 
 [DEMO](https://cloning-omdb-ohminkwon.netlify.app/)
@@ -78,7 +78,110 @@ Vue 3버전에 대응하는 플러그인들과 최신의 부트스트랩 5버전
 - `npm i vuex@next`
 - `npm i vue-router@4`
 - `npm i @vue/test-utils@next`
-- `npm i vue-jest@next`
+- `npm i vue-jest@next`  
+
+> jest 및 babel-jest는 26.6.3 버전을 사용합니다.
+</br>최신 27 버전에서의 TypeScript 호환 오류
+
+## 🔧 단위 테스트(Unit test)
+
+단위(Unit) 테스트란 데이터(상태), 함수(메소드), 컴포넌트 등의 정의된 프로그램 최소 단위들이 독립적으로 정상 동작하는지 확인하는 것을 말합니다.</br>
+이를 통해 프로그램 전체의 신뢰도를 향상하고 코드 리팩터링(Code refactoring)의 부담을 줄일 수 있습니다.
+
+### 구성
+
+`jest.config.js` 파일을 생성하고 다음과 같이 Jest 구성 옵션을 추가합니다.
+
+```js
+module.exports = {
+  // 파일 확장자를 지정하지 않은 경우, Jest가 검색할 확장자 목록입니다.
+  // 일반적으로 많이 사용되는 모듈의 확장자를 지정합니다.
+  moduleFileExtensions: [
+    'js',
+    'vue'
+  ],
+
+  // `~` 같은 경로 별칭을 매핑합니다.
+  // E.g. `import HelloWorld from '~/components/HelloWorld.vue';`
+  // `<rootDir>` 토큰을 사용해 루트 경로를 참조할 수 있습니다.
+  moduleNameMapper: {
+    '^~/(.*)$': '<rootDir>/src/$1'
+  },
+
+  // 일치하는 경로에서는 모듈을 가져오지 않습니다.
+  // `<rootDir>` 토큰을 사용해 루트 경로를 참조할 수 있습니다.
+  modulePathIgnorePatterns: [
+    '<rootDir>/node_modules',
+    '<rootDir>/dist',
+    '<rootDir>/cypress' // For e2e test
+  ],
+
+  // jsdom 환경에 대한 URL을 설정합니다.
+  // https://github.com/facebook/jest/issues/6766
+  testURL: 'http://localhost/',
+
+  // 정규식과 일치하는 파일의 변환 모듈을 지정합니다.
+  transform: {
+    '^.+\\.vue$': 'vue-jest',
+    '^.+\\.js$': 'babel-jest'
+  }
+}
+```
+
+`.eslintrc.js` 파일에 다음과 같이 jest 환경 옵션을 추가합니다.
+
+```js
+module.exports = {
+  env: {
+    browser: true,
+    node: true,
+    jest: true
+  },
+  // ...
+}
+```
+
+## 🔧 E2E 테스트(End to End test)
+
+E2E(End to End) 테스트란 애플리케이션의 처음부터 끝까지의 흐름을 테스트하는 방법입니다.<br>
+실제 사용자의 관점에서 테스트를 진행하며, 브라우저, 네트워크, DB 등 실제 환경을 최대한 그대로 활용해 진행합니다.<br>
+사용자 환경과 거의 동일하게 테스트를 진행하기 때문에 실제 상황에서 발생할 수 있는 여러 에러를 사전에 발견할 수 있습니다.
+
+### 폴더 구조
+
+- `fixtures`: 테스트에서 활용될 수 있는 정적 데이터 파일들을 보관합니다.
+- `integration`: 기본적인 테스트 파일들이 위치합니다.
+- `plugins`: 여러 플러그인으로 내부 동작을 활용, 수정 또는 확장할 수 있습니다.
+- `support`: 모든 테스트에 직전에 자동으로 포함되는 사전 지원 코드를 작성할 수 있습니다.
+- `screenshots`: `cy.screenshot()` 명령으로 생성됩니다.
+- `videos`: `cypress run` 스크립트로 생성됩니다.
+
+`cypress.json` 파일에 다음과 같이 구성 옵션을 추가합니다.
+
+```json
+{
+  "baseUrl": "http://localhost:8080",
+  "viewportWidth": 1500,
+  "viewportHeight": 800
+}
+```
+
+`.eslintrc.js` 파일에 다음과 같이 Cypress 환경 옵션을 추가합니다.
+
+```js
+module.exports = {
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+    "cypress/globals": true
+  },
+  plugins: [
+    "cypress"
+  ],
+  // ...
+}
+```
 
 ## 📚 Refs
 ### HTML Entities in numeric order
