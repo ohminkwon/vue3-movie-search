@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/83b69c89-4474-42a7-98e0-5f341635b539/deploy-status)](https://app.netlify.com/sites/cloning-omdb-ohminkwon/deploys)
 
-# 🎥 Vue3 Movie app
+# 🎥 Vue3 Movie Search
 
 Vue3와 OMDb API를 사용하는 영화 검색 애플리케이션 예제입니다.
 Vue3-webpack-template를 활용하여 프로젝트를 시작합니다.
